@@ -13,12 +13,13 @@ export class CartComponent {
     name: '',
     address: '',
   });
+
   constructor(
     private cartService: CartService,
     private formBuilder: FormBuilder
   ) {}
 
-  onSubmit(): void{
+  onSubmit(): void {
     //Process checkout data here
     this.items = this.cartService.clearCart();
     console.warn('Your Order has been submitted', this.checkoutForm.value);
